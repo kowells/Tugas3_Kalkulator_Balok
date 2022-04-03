@@ -26,7 +26,7 @@ public class View extends JFrame implements ActionListener{
             lWidth= new JLabel("Width");
             lHeight = new JLabel("Height");
             lResult = new JLabel("Result :");
-            lSquareA = new JLabel(""); //menampilkan kosong
+            lSquareA = new JLabel(""); 
             lSquareC = new JLabel("");
             lCuboidV = new JLabel("");
             lCuboidSA = new JLabel("");
@@ -52,7 +52,7 @@ public class View extends JFrame implements ActionListener{
             add(fLength);
             add(fWidth);
             add(fHeight);
-            //4 baris di bawah ini untuk menampilkan kata ketika count diklik
+            
             add(lSquareA);
             add(lSquareC);
             add(lCuboidV);
@@ -98,12 +98,11 @@ public class View extends JFrame implements ActionListener{
         public void actionPerformed(ActionEvent e)
         {
             if(e.getSource() == tombolCount){
-                //mengambil input dari setiap text field
+                
                 String l = fLength.getText();
                 String w = fWidth.getText();
                 String h = fHeight.getText();
                 try{
-                    //untuk mengubah dari string ke double
                     double length = Double.parseDouble(l);
                     double width = Double.parseDouble(w);
                     double height = Double.parseDouble(h);
@@ -114,13 +113,13 @@ public class View extends JFrame implements ActionListener{
                     lSquareC.setText("Square Circumference");
                     lCuboidV.setText("Cuboid Volume");
                     lCuboidSA.setText("Cuboid Surface Area");
-                    //code di bawah ini untuk menuliskan ":" dan hasilnya
+                    
                     lHasil1.setText(": "+balok.getLuas());
                     lHasil2.setText(": "+balok.getKeliling());
                     lHasil3.setText(": "+balok.getVolume());
                     lHasil4.setText(": "+balok.getLuaspermukaan());
 
-                }catch(Exception error){//menangkap error
+                }catch(Exception error){
                     JOptionPane.showMessageDialog(new JFrame(), error.getMessage()); 
                 }
 
