@@ -17,19 +17,19 @@ public class Balok extends Persegi implements MenghitungRuang{
         super(panjang, lebar);
         this.tinggi = tinggi;
     }
-    public Balok(double panjang, double lebar){ //overload
+    public Balok(double panjang, double lebar){ 
         super(panjang, lebar);
     }
     
     @Override
     public void menghitungVolume() {
-        this.volume = this.tinggi*super.getLuas(); //luas = panjang * lebar
+        this.volume = this.tinggi*super.getLuas(); 
     }
 
     @Override
     public void menghitungLuasPermukaan() {
         this.luaspermukaan = 2*(super.getPanjang()*this.tinggi+super.getPanjang()*super.getLebar()+super.getLebar()*this.tinggi);
-    }//rumus luas permukaan = 2*(pt+pl+lt)
+    }
     
     public double getTinggi() {
         return tinggi;
