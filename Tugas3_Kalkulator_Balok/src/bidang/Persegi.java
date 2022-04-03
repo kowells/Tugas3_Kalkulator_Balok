@@ -39,12 +39,12 @@ public class Persegi implements MenghitungBidang{
 
     @Override
     public void menghitungLuas() {
-        this.luas = this.panjang*this.lebar; // luas = p * l
+        this.luas = this.panjang*this.lebar; 
     }
 
     @Override
     public void menghitungKeliling() {
-        this.keliling = 2*(this.panjang+this.lebar); // keliling = 2 (p+l)
+        this.keliling = 2*(this.panjang+this.lebar); 
     }
 
     public double getLuas() {
